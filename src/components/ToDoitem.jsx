@@ -1,3 +1,4 @@
+import { MdDelete, MdEdit, MdDone } from "react-icons/md";
 
 function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
     return(
@@ -10,9 +11,26 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
             <p>{task.date}</p>
 
             <div className="action-icon">
-                <button onClick={() => toggleComplete(index)}>Tick</button>
-                <button onClick={() => deleteTask(index)}Delete></button>
-                <button onClick={ () => editTask(index) }>Edit</button>
+                {/*Tick  Button */}
+                <button
+                className="p-2 text-green-600 hover:text-green-800"
+                onClick={() => toggleComplete(index)}>
+                    <MdDone size={20} />
+                </button>
+
+                {/* delete button */}
+                <button 
+                className= "p-2 text-green-600 hover:text-green-800"
+                onClick={() => deleteTask(index)}>
+                    <MdDelete size= {20}/>
+                </button>
+
+                {/* edit button */}
+                <button 
+                className="p-2 text-green-600 hover:text-green-800"
+                onClick={ () => editTask(index) }>
+                    <MdEdit size= {20}/>
+                </button>
                 
             </div>
 

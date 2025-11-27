@@ -1,15 +1,14 @@
-function Priority() {
+function Status() {
     return(
-        <div className="Priority-Wrapper">
-            <h3>Priority</h3>
+        <div className="p-4 bg-white rounded-xl shadow border border-gray-200">
+            <h3>Status</h3>
             <ul>
-                <li>High</li>
-                <li>Medium</li>
-                <li>Low</li>
+                <li>Pending</li>
+                <li>Completed</li>
             </ul>
             
         </div>
     );
 }
 
-export default Priority;
+export default Status;

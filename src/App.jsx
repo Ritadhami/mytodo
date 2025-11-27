@@ -43,7 +43,8 @@ function App() {
  
   
   return(
-    <div className='App-Container'>
+    <div className="max-w-4xl mx-auto mt-10 p-6 bg-white/90 rounded-2xl shadow-xl border border-gray-200">
+
 
        {/* for input and buttons  */}
       <div className='add-todo-card'>
@@ -53,7 +54,7 @@ function App() {
       {/* for side card :Status and priority  */}
      <div className='side-cards'>
       <Status/>
-      <PriorityFilter/>
+      <Priority/>
       </div>
 
       {/* for to-do list card  */}

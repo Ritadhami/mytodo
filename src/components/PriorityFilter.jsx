@@ -1,6 +1,6 @@
 function Priority() {
     return(
-        <div className="Priority-Wrapper">
+        <div>
             <h3>Priority</h3>
             <ul>
                 <li>High</li>
