@@ -1,6 +1,6 @@
 import ToDoitem from './ToDoitem';
 
-function TodoList({ tasks, deleteTask, toggleComplete, editTask }) {
+function ToDoList({ tasks, deleteTask, toggleComplete, editTask }) {
   return (
     <div className='Todo-list'>
       <h3>Your Task</h3>
