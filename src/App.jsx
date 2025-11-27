@@ -1,6 +1,5 @@
-import { useState } from 'react'
-// import AddTodo from './components/AddTodo'
-import Priority from './components/PriorityFilter'
+import { useState } from 'react';
+import Priority from './components/Priority';
 import Status from './components/Status';
 import ToDoList from './components/ToDoList';
 import AddTodo from './components/AddTodo';
