@@ -11,12 +11,17 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
             <p>{task.date}</p>
 
             <div className="action-icon">
+
                 {/*Tick  Button */}
                 <button
                 className="p-2 text-green-600 hover:text-green-800"
                 onClick={() => toggleComplete(index)}>
                     <MdDone size={20} />
                 </button>
+
+                {/* Only show delete and edit if status is Pending */}
+                {task.status === "Pending" && (
+                    <>
 
                 {/* delete button */}
                 <button 
@@ -26,11 +31,19 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
                 </button>
 
                 {/* edit button */}
-                <button 
-                className="p-2 text-green-600 hover:text-green-800"
-                onClick={ () => editTask(index) }>
-                    <MdEdit size= {20}/>
+                <button>
+            
+                onClick={() => {
+                    const newTitle =prompt("Edit Task name ", task.taskName);
+                    const newPriority = prompt("Edit Priority", task.priority);
+                    if(newTitle && newPriority) {
+                        editTask(index, newTitle, newPriority);
+                    }
+                }}
+                <MdEdit size= {20}/>
                 </button>
+                </>
+    )}
                 
             </div>
 

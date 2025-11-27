@@ -23,17 +23,17 @@ function AddTodo({addTask}) {
 
 return(
 
-        <div className="add-todo-wrapper">
+        <div className="flex flex-col gap-4 p-4 bg-white rounded-xl shadow-md md:flex-row md:items-center">
 
             <input
              type="text" 
              placeholder="Task Name " 
-             className="taskname-input"
+             className="px-3 py-2 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
              value={taskName} 
              onChange={(e) => setTaskName(e.target.value)}
              />
 
-            <select className="priority-select"
+            <select className="px-3 py-2 border rounded-lg w-full md:w-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
             >
@@ -44,13 +44,15 @@ return(
             </select>
 
             <input
-             type="text" 
+             type="date" 
              placeholder="Deadline"
-             className="Date-input"
+             className="px-3 py-2 border rounded-lg w-full md:w-44 focus:outline-none focus:ring-2 focus:ring-blue-400"
              value={date}
              onChange={(e) => setDate(e.target.value)}
              />
-            <button className="save-btn" onClick={handleSave}>save</button>
+            <button
+             className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" 
+             onClick={handleSave}>save</button>
 
         </div>
     );
