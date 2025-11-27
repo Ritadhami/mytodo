@@ -9,6 +9,7 @@ import AddTodo from './components/AddTodo';
 function App() {
   const [tasks,setTasks]= useState([]); //store all task 
   
+  
   // Add new task 
   const addTask = (task) => {
     setTasks([...tasks, task]);
@@ -39,8 +40,7 @@ function App() {
     };
     setTasks(newTasks);
   };
-}
-    
+ 
   
   return(
     <div className='App-Container'>
@@ -70,6 +70,7 @@ function App() {
     </div>
 
   );
+}
 
  
 

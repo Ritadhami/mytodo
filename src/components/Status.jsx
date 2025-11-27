@@ -12,4 +12,4 @@ function Priority() {
     );
 }
 
-export default PriorityFilter;
+export default Priority;
