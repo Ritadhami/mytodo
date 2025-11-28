@@ -7,18 +7,19 @@ function ToDoList({ tasks, deleteTask, toggleComplete, editTask }) {
       {tasks.length === 0 ? (
         <p>No tasks yet</p>
       ) : (
-        <div> 
-          <table>
-            <thead>
+        <div className='overflow-x-auto'> 
+          <table className='min-w-full border border-gray-300'>
+            <thead className='bg-gray-100'>
               <tr>
-                <th>#</th>
-                <th>Task Name</th>
-                <th>Priority</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th className='border px-2 py-1'>S.N</th>
+                <th className='border px-2 py-1'>Task Name</th>
+                <th className='border px-2 py-1'>Priority</th>
+                <th className='border px-2 py-1'>Status</th>
+                <th className='border px-2 py-1'>Actions</th>
               </tr>
             </thead>
             <tbody>
+            
        {tasks.map((task, index) => (
           <ToDoitem
             key={index}
@@ -30,6 +31,7 @@ function ToDoList({ tasks, deleteTask, toggleComplete, editTask }) {
           />
         ))}
         </tbody>
+        
         </table>
         </div>
     )}

@@ -7,7 +7,7 @@ function AddTodo({addTask}) {
   const [date, setDate] = useState('');
   
   const handleSave = () => {
-    if(!taskName || !priority || !date)
+    if(!taskName || !priority || !date) 
       return;
     addTask({
       taskName,
@@ -28,12 +28,12 @@ return(
             <input
              type="text" 
              placeholder="Task Name " 
-             className="px-3 py-2 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+             className="flex-1 px-3 py-2 border rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-400"
              value={taskName} 
              onChange={(e) => setTaskName(e.target.value)}
              />
 
-            <select className="px-3 py-2 border rounded-lg w-full md:w-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            <select className=" flex-1 md:w-40 px-3 py-2 border rounded-lg w-full md:w-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
             >
@@ -46,7 +46,7 @@ return(
             <input
              type="date" 
              placeholder="Deadline"
-             className="px-3 py-2 border rounded-lg w-full md:w-44 focus:outline-none focus:ring-2 focus:ring-blue-400"
+             className=" flex-1 md:w-44 px-3 py-2 border rounded-lg w-full md:w-44 focus:outline-none focus:ring-2 focus:ring-blue-400"
              value={date}
              onChange={(e) => setDate(e.target.value)}
              />

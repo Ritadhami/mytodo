@@ -40,6 +40,7 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
                         editTask(index, newTitle, newPriority);
                     }
                 }}
+                
                 <MdEdit size= {20}/>
                 </button>
                 </>
