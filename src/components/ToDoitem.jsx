@@ -5,6 +5,7 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
         <div className="Todo-item-row">
 
             <p>{index +1}</p>
+            <p>{task.taskName}</p>
             <p>{task.priority}</p>
             <p>{task.status}</p>
             <p>{task.date}</p>
