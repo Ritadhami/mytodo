@@ -6,6 +6,7 @@ import AddTodo from './components/AddTodo';
 
 
 function App() {
+  <h1>To-Do App</h1>
   const [tasks,setTasks]= useState([]); //store all task 
   
   
