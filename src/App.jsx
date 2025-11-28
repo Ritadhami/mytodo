@@ -6,7 +6,7 @@ import AddTodo from './components/AddTodo';
 
 
 function App() {
-  <h1>To-Do App</h1>
+  
   const [tasks,setTasks]= useState([]); //store all task 
   
   
@@ -43,7 +43,9 @@ function App() {
  
   
   return(
+    
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white/90 rounded-2xl shadow-xl border border-gray-200">
+      <h1 className="text-2xl font-bold text-center mb-4">To-Do App</h1>
 
 
        {/* for input and buttons  */}

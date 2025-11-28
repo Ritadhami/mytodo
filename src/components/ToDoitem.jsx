@@ -31,15 +31,10 @@ function ToDoitem({ task, index, deleteTask, toggleComplete , editTask}) {
                 </button>
 
                 {/* edit button */}
-                <button>
-            
-                onClick={() => {
-                    const newTitle =prompt("Edit Task name ", task.taskName);
-                    const newPriority = prompt("Edit Priority", task.priority);
-                    if(newTitle && newPriority) {
-                        editTask(index, newTitle, newPriority);
-                    }
-                }}
+                <button
+                className= "p-2 text-green-600 hover:text-green-800"
+                
+                  onClick={() => editTask(task)}>
                 
                 <MdEdit size= {20}/>
                 </button>
