@@ -15,6 +15,7 @@ function ToDoList({ tasks, deleteTask, toggleComplete, editTask }) {
                 <th className='border px-2 py-1'>Task Name</th>
                 <th className='border px-2 py-1'>Priority</th>
                 <th className='border px-2 py-1'>Status</th>
+                <th className='border px-2 py-1'>Date</th>
                 <th className='border px-2 py-1'>Actions</th>
               </tr>
             </thead>
